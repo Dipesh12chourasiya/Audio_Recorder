@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00.00"
+            android:textSize="60sp"
+            app:layout_constraintBottom_toTopOf="@+id/waveformView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginBottom="30dp" />
+
+
+        <com.example.audiorecorder.WaveformView
+            android:id="@+id/waveformView"
+            android:layout_width="match_parent"
+            android:layout_height="400px"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="80dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageButton
+                android:id="@+id/btnDelete"
+                android:layout_width="60dp"
+                android:src="@drawable/round_delete_disabled"
+                android:background="@drawable/ic_ripple"
+                android:layout_height="70dp" />
+
+            <ImageButton
+                android:id="@+id/btnRecord"
+                android:layout_width="70dp"
+                android:background="@drawable/ic_record"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_height="70dp" />
+
+            <ImageButton
+                android:id="@+id/btnList"
+                android:layout_width="60dp"
+                android:src="@drawable/round_menu_24"
+                android:background="@drawable/ic_ripple"
+                android:layout_height="70dp" />
+
+            <ImageButton
+                android:id="@+id/btnDone"
+                android:layout_width="60dp"
+                android:visibility="gone"
+                android:src="@drawable/round_done_24"
+                android:background="@drawable/ic_ripple"
+                android:layout_height="70dp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/bottomSheetBG"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:background="@color/white"/>
+<!--    // important thing that we can change the bg to opac as well-->
+
+    <include layout="@layout/bottom_sheet" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
