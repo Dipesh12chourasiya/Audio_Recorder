@@ -18,8 +18,8 @@ import com.google.android.material.chip.Chip
 class AudioPlayerActivity : AppCompatActivity() {
     private lateinit var mediaPlayer: MediaPlayer
     private lateinit var btnPlay: ImageButton
-    private lateinit var btnBackward: ImageButton
-    private lateinit var btnForward: ImageButton
+//    private lateinit var btnBackward: ImageButton
+//    private lateinit var btnForward: ImageButton
 //    private lateinit var speedChip: Chip
     private lateinit var seekBar: SeekBar
 
@@ -42,8 +42,8 @@ class AudioPlayerActivity : AppCompatActivity() {
 
 
         btnPlay = findViewById(R.id.btnPlay)
-        btnBackward = findViewById(R.id.btnBackward)
-        btnForward = findViewById(R.id.btnForward)
+//        btnBackward = findViewById(R.id.btnBackward)
+//        btnForward = findViewById(R.id.btnForward)
         //        speedChip = findViewById(R.id.chip)
         seekBar = findViewById(R.id.seekBar)
 
